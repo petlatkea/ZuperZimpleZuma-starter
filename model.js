@@ -1,6 +1,19 @@
 import SimpleLinkedList from "./simplelinkedlist.js";
 
-export { init, getFirstBall, getNextBall, getCannonBall, addRandomBall, dump, addBall, insertBallAfter, numberOfBalls, loadCannon, removeMatches, list};
+export {
+    init,
+    getFirstBall,
+    getNextBall,
+    getCannonBall,
+    addRandomBall,
+    dump,
+    addBall,
+    insertBallAfter,
+    numberOfBalls,
+    loadCannon,
+    removeMatches,
+    list,
+};
 
 const list = new SimpleLinkedList();
 
@@ -85,6 +98,8 @@ function checkMatches(node) {
 }
 
 function removeMatches(matches) {
+    if (!matches.length >= 3) return;
+
     for (const match of matches) {
         list.remove(match);
     }
