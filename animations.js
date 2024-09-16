@@ -75,8 +75,8 @@ function animateCannonBall(model, newBall) {
   // TODO: Find the position (x and y) of the ballImage
 
   // Invert: calculate the distance to move from source to destination
-  const deltaX; 
-  const deltaY;
+  const deltaX = 100; // TODO: Replace silly constant with actual distance
+  const deltaY = 100; // TODO: Replace silly constant with actual distance
 
   // Play: run the animation from source to destination
   ballImage.style.setProperty("--delta-x", deltaX + "px");
