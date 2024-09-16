@@ -15,7 +15,7 @@ function animateNewBall(model, newBall) {
   view.updateDisplay(model)
 
   // Find the visualBall for this newBall
-  const visualBall; // TODO: get the visual Ball from the view
+  const visualBall = view.getVisualBall(newBall); // TODO: get the visual Ball from the view
 
   // We only want to animate the image - not the entire div with the button
   const onlyImg = visualBall.firstElementChild;

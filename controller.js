@@ -11,6 +11,7 @@ function init() {
   view.init();
 
   createInitialChain();
+  model.loadCannon();
   view.updateDisplay(model);
   // show debug info on the model
   model.dump();
@@ -27,10 +28,13 @@ function createInitialChain() {
 }
 
 // TODO: Add controller functions to handle things happening in the view
-
-
+function addNewBall() {
+  model.addRandomBall();
+  view.updateDisplay(model);
+}
 
 // **** ANIMATIONS ****
 
 // TODO: Add controller functions to be called when animations have completed
 
+export {addNewBall}
