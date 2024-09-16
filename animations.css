@@ -1,0 +1,69 @@
+/* animations */
+
+.animate-add {
+  animation: newBall 1s ease-in 1;
+}
+
+@keyframes newBall {
+  0% {
+    transform: translateX(var(--delta-x)) rotate(600deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+}
+
+.animate-expand {
+  animation-name: expand;
+  animation-duration: .2s;
+  animation-timing-function: ease-in;
+  animation-delay: 0.8s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+}
+
+/* hack to make the button invisible while expanding */
+.animate-expand button {
+  display: none;
+}
+
+@keyframes expand {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100px;
+  }
+}
+
+.animate-fromcannon {
+  animation: animatefromcannon 1s ease-in 1;
+}
+
+@keyframes animatefromcannon {
+  from {
+    transform: translate(var(--delta-x), var(--delta-y));
+  }
+  to {
+    transform: translate(0,0);
+  }
+}
+
+.animate-implode {
+  animation: implode .7s ease-in 1 forwards;
+}
+
+.animate-implode button {
+  display: none;
+}
+
+@keyframes implode {
+  from {
+    scale: 1;
+    width: 122px;
+  }
+  to {
+    scale: 0;
+    width: 0;
+  }
+}

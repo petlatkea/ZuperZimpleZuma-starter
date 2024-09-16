@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZuperZimpleZuma - model</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>The Model</h1>
+    <h2>Åbn konsollen!</h2>
+
+    <aside>
+      Fordi at kunne tilgå funktionerne i <code>model.js</code> (som er et module) ude fra Console, er vi nødt til at "afbryde" programmet.<br />
+      Derfor skal den allersidste linje i model.js være <code>debugger</code>, og du skal reloade siden efter at have åbnet console.<br />
+      Den vil stå og "spinne" som om den stadig loader, men det er ok - det betyder at det virker!
+    </aside>
+
+    <p>Du kan nu "spille" spillet ved at kalde funktioner i konsollen:</p>
+    <dl>
+      <dt><code>dump()</code></dt>
+      <dd><i>dumped</i> indholdet af modellen til konsollen - viser hvad den indeholder</dd>
+      <dt><code>randomBall()</code></dt>
+      <dd>returnerer en random <i>ball</i> - en "data-value" der kan tilføjes listen</dd>
+      <dt><code>addBall( ball )</code></dt>
+      <dd><i>tilføjer</i> bolden til slutningen af listen - og returnerer den nye node</dd>
+      <dt><code>numberOfBalls()</code></dt>
+      <dd>giver antallet af bolde i listen</dd>
+    </dl>
+
+    <p>
+      Tilføj flere funktioner så spillet er komplet, og du kan "lade kanonen" med en bold, skyde den ind et sted i rækken, finde ud af om det gav matches, og fjerne dem.<br />
+      Vi bliver enige om de præcise funktions-navne i undervisningen.
+    </p>
+
+    <script src="model.js" type="module"></script>
+  </body>
+</html>
