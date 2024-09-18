@@ -40,7 +40,7 @@ function addRandomBall() {
 }
 
 function addBall(ball) {
-    list.add(ball);
+    return list.add(ball);
 }
 
 // TODO: Implement more functions
@@ -54,8 +54,8 @@ function getNextBall(ball) {
 
 function insertBallAfter(ball, node) {
     const newNode = list.insertAfter(ball, node);
-    return checkMatches(newNode);
-    // return newNode;
+    checkMatches(newNode);
+    return newNode;
 }
 
 function numberOfBalls() {
@@ -94,20 +94,18 @@ function checkMatches(node) {
         matches.push(lookat);
         lookat = lookat.next;
     }
-    
+
     removeMatches(matches);
-    // return matches;
 }
 
 function removeMatches(matches) {
     console.log(matches);
-    
+
     if (matches.length < 3) {
         console.log("Not enough matches to remove!");
         return;
     }
-    console.log("hello");
-    
+
     for (const match of matches) {
         list.remove(match);
     }
