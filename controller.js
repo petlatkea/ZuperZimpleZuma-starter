@@ -33,8 +33,15 @@ function addNewBall() {
   view.updateDisplay(model);
 }
 
+function insertCannonballAfter(ballNode) {
+  const cannonball = model.getCannonBall();
+  model.insertBallAfter(cannonball, ballNode);
+  model.loadCannon();
+  view.updateDisplay(model);
+}
+
 // **** ANIMATIONS ****
 
 // TODO: Add controller functions to be called when animations have completed
 
-export {addNewBall}
+export { addNewBall, insertCannonballAfter };

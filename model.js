@@ -54,7 +54,8 @@ function getNextBall(ball) {
 
 function insertBallAfter(ball, node) {
     const newNode = list.insertAfter(ball, node);
-    return checkMatches(newNode);
+    return newNode;
+    // return checkMatches(newNode);
 }
 
 function numberOfBalls() {

@@ -1,6 +1,5 @@
 // TODO: Import controller
 import * as controller from "./controller.js";
-export { init, updateDisplay, getVisualBall };
 
 // *********************************
 // *                               *
@@ -91,6 +90,7 @@ function addButtonTo(visualBall, ballModel) {
         // notify controller
         console.log("TODO: Notify controller that we want to insert the cannonball after this!");
         // TODO: Notify controller that we want to insert the cannonball after this!
+        controller.insertCannonballAfter(ballModel);
     });
 }
 
@@ -99,3 +99,5 @@ function createButton() {
     button.textContent = "↑";
     return button;
 }
+
+export { init, updateDisplay, getVisualBall };
